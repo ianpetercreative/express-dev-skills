@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        |
+        <a href="/skills">Skills</a>
+    </nav>
+    <h1>Edit Skill</h1>
+    <form action="/skills/<%= skill.id %>?_method=PUT" method="POST" autocomplete="off">
+        <input type="text" value="<%= skill.skill %>" name="skill">
+        <label>
+            <input type="checkbox" name="learned" <%= skill.learned ? 'checked' : '' %>>
+            Learned 
+        </label>
+        <button type="submit">Update Skill</button>
+    </form>
+</body>
+</html>
