@@ -4,10 +4,16 @@ const skillsCtrl = require('../controllers/skills')
 
 // All paths start with /skills 
 
-// GET /todos 
+// GET /skills  
 router.get('/', skillsCtrl.index)
 
-//GET /todos/:id
+// GET /skills/new
+router.get('/new', skillsCtrl.new) 
+
+//GET /skills/:id
 router.get('/:id', skillsCtrl.show);
+
+// POST /skills 
+router.post('/skills', skillsCtrl.create)
 
 module.exports = router;

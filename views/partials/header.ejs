@@ -12,16 +12,4 @@
         |
         <a href="/skills">Skills</a>
     </nav>
-    <h1>Skills</h1>
-    <ul>
-      <% skills.forEach(function(s) { %>
-        <li>
-          <a href="/skills/<%= s.id%>"><%= s.skill %></a>
-            - 
-          <%= s.learned ? 'skill acquired' : 'skill not yet acquired' %>
-        </li>
-      <% }); %>
-    </ul>
-    <a href="/skills/new">Add New Skill</a>
-</body>
-</html>
+    <h1><%= title %></h1>
