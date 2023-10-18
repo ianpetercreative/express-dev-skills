@@ -1,18 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
-<body>
-    <nav>
-        <a href="/">Home</a>
-        |
-        <a href="/skills">Skills</a>
-    </nav>
-    <h1>Skills</h1>
+<%- include('../partials/header') %>
+
     <ul>
       <% skills.forEach(function(s) { %>
         <li>
@@ -26,5 +13,5 @@
       <% }); %>
     </ul>
     <a href="/skills/new">Add New Skill</a>
-</body>
-</html>
+
+<%- include('../partials/footer') %>

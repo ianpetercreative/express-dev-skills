@@ -35,17 +35,19 @@ function create (req, res) {
 }
 
 function newSkill(req, res) {
-    res.render('skills/new', { title: 'New Skill' })
+    res.render('skills/new', { title: 'Add New Skill' })
 }
 
 function index (req, res) {
     res.render('skills/index', {
+        title: "Skills",
         skills: Skill.getAll()
     });
 };
 
 function show(req, res) {
     res.render('skills/show', {
+        title: "Skill Details",
         skill: Skill.getOne(req.params.id)
     })
 }
